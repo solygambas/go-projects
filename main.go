@@ -104,9 +104,22 @@ func main() {
 	// fmt.Println(sort.SearchStrings(names, "bowser"))
 
 	// for loop
-	x := 0
-	for x < 5 {
-		fmt.Println("value fo x is:", x)
-		x++
-	}
+	// x := 0
+	// for x < 5 {
+	// 	fmt.Println("value fo x is:", x)
+	// 	x++
+	// }
+	// for i := 0; i < 5; i++ {
+	// 	fmt.Println("value fo i is:", i)
+	// }
+	// names := []string{"yoshi", "mario", "peach", "bowser", "luigi"}
+	// for i := 0; i < len(names); i++ {
+	// 	fmt.Println(names[i])
+	// }
+	// for index, value := range names {
+	// 	fmt.Printf("the value at index %v is %v \n", index, value)
+	// }
+	// for _, value := range names {
+	// 	fmt.Printf("the value is %v \n", value)
+	// }
 }
