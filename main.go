@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
 	// strings
@@ -60,7 +63,7 @@ func main() {
 	// var ages [3]int = [3]int{20, 25, 30}
 	// var ages = [3]int{20, 25, 30}
 	// fmt.Println(ages, len(ages))
-	names := [4]string{"yoshi", "mario", "peach", "bowser"}
+	// names := [4]string{"yoshi", "mario", "peach", "bowser"}
 	// names[1] = "luigi"
 	// fmt.Println(names, len(names))
 
@@ -78,4 +81,26 @@ func main() {
 	// fmt.Printf("the type of rangeOne is %T \n", rangeOne) // []string
 	// rangeOne = append(rangeOne, "koopa")
 	// fmt.Println(rangeOne) // mario peach koopa
+
+	// standard library
+	// https://golang.org/pkg/
+	
+	// strings package - doesn't alter original package
+	// greeting := "Hello there friends!"
+	// fmt.Println(strings.Contains(greeting, "Hello"))
+	// fmt.Println(strings.ReplaceAll(greeting, "Hello", "Hi"))
+	// fmt.Println(strings.ToUpper(greeting))
+	// fmt.Println(strings.Index(greeting, "ll"))
+	// fmt.Println(strings.Split(greeting, " "))
+
+	// sort package
+	// ages := []int{45, 20, 35, 30, 75, 68, 58, 25}
+	// sort.Ints(ages)
+	// fmt.Println(ages)
+	// index := sort.SearchInts(ages, 30)
+	// fmt.Println(index)
+	names := []string{"yoshi", "mario", "peach", "bowser", "luigi"}
+	sort.Strings(names)
+	fmt.Println(names)
+	fmt.Println(sort.SearchStrings(names, "bowser"))
 }
