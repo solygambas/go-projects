@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"sort"
 )
 
 func main() {
@@ -99,8 +98,15 @@ func main() {
 	// fmt.Println(ages)
 	// index := sort.SearchInts(ages, 30)
 	// fmt.Println(index)
-	names := []string{"yoshi", "mario", "peach", "bowser", "luigi"}
-	sort.Strings(names)
-	fmt.Println(names)
-	fmt.Println(sort.SearchStrings(names, "bowser"))
+	// names := []string{"yoshi", "mario", "peach", "bowser", "luigi"}
+	// sort.Strings(names)
+	// fmt.Println(names)
+	// fmt.Println(sort.SearchStrings(names, "bowser"))
+
+	// for loop
+	x := 0
+	for x < 5 {
+		fmt.Println("value fo x is:", x)
+		x++
+	}
 }
