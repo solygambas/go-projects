@@ -2,7 +2,26 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
+
+func sayGreeting(n string) {
+	fmt.Printf("Good morning %v \n", n)
+}
+
+func sayBye(n string) {
+	fmt.Printf("Goodbye %v \n", n)
+}
+
+func cycleNames(n []string, f func(string)) {
+	for _, value := range n {
+		f(value)
+	}
+}
+
+func circleArea(r float64) float64 {
+	return math.Pi * r * r
+}
 
 func main() {
 	// strings
@@ -138,17 +157,28 @@ func main() {
 	// 	fmt.Println("age is not less than 40")
 	// }
 
-	names := []string{"mario", "luigi", "yoshi", "peach", "bowser"}
+	// names := []string{"mario", "luigi", "yoshi", "peach", "bowser"}
 
-	for index, value := range names {
-		if index == 1 {
-			fmt.Println("continuing at pos", index)
-			continue // skip code after
-		}
-		if index == 2 {
-			fmt.Println("breaking at pos", index)
-			break // stop the loop
-		}
-		fmt.Printf("the value at pos %v is %v \n", index, value)
-	}
+	// for index, value := range names {
+	// 	if index == 1 {
+	// 		fmt.Println("continuing at pos", index)
+	// 		continue // skip code after
+	// 	}
+	// 	if index == 2 {
+	// 		fmt.Println("breaking at pos", index)
+	// 		break // stop the loop
+	// 	}
+	// 	fmt.Printf("the value at pos %v is %v \n", index, value)
+	// }
+
+	// functions
+	// sayGreeting("Mario")
+	// sayBye("Luigi")
+
+	// cycleNames([]string{"cloud", "tifa", "barret"}, sayGreeting)
+
+	a1 := circleArea(10.5)
+	a2 := circleArea(15)
+	fmt.Println(a1, a2)
+	fmt.Printf("circle 1 is %0.3f and circle 2 is %0.3f", a1, a2)
 }
