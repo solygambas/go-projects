@@ -6,6 +6,8 @@ import (
 	"strings"
 )
 
+var score = 99.5
+
 func sayGreeting(n string) {
 	fmt.Printf("Good morning %v \n", n)
 }
@@ -199,10 +201,19 @@ func main() {
 	// fmt.Printf("circle 1 is %0.3f and circle 2 is %0.3f", a1, a2)
 
 	// returning multiple values
-	firstName, secondName := getInitials("Tifa Lockhart")
-	fmt.Println(firstName, secondName)
-	firstName2, secondName2 := getInitials("cloud strife")
-	fmt.Println(firstName2, secondName2)
-	firstName3, secondName3 := getInitials("barret")
-	fmt.Println(firstName3, secondName3)
+	// firstName, secondName := getInitials("Tifa Lockhart")
+	// fmt.Println(firstName, secondName)
+	// firstName2, secondName2 := getInitials("cloud strife")
+	// fmt.Println(firstName2, secondName2)
+	// firstName3, secondName3 := getInitials("barret")
+	// fmt.Println(firstName3, secondName3)
+
+	// package scope
+	sayHello("Mario")
+
+	for _, v := range points {
+		fmt.Println(v)
+	}
+	
+	showScore()
 }
