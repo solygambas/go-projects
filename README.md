@@ -1,6 +1,6 @@
 # Billing CLI - Go Projects
 
-A bill calculator using the command-line interface to understand GO basics.
+A bill calculator using the command-line interface to understand Go basics.
 
 <p align="center">
         <img src="screenshot.png">
