@@ -41,6 +41,19 @@ if len(initials) > 1 {
 return initials[0], "_"
 }
 
+func updateName(x string) string {
+	x = "wedge" // local copy
+	return x // return is needed to update original value
+}
+
+func updateMenu(y map[string]float64) {
+	y["coffee"] = 2.99
+}
+
+func updateNameP(x *string) {
+	*x = "wedge"
+}
+
 func main() {
 	// strings
 	// var nameOne string = "Mario"
@@ -231,15 +244,40 @@ func main() {
 	// }
 
 	// ints as key type
-	phonebook := map[int]string{
-		267584967: "mario",
-		984759373: "luigi",
-		845775485: "peach",
-	}
-	fmt.Println(phonebook)
-	fmt.Println(phonebook[267584967])
-	phonebook[267584967] = "bowser"
-	fmt.Println(phonebook)
-	phonebook[845775485] = "yoshi"
-	fmt.Println(phonebook)
+	// phonebook := map[int]string{
+	// 	267584967: "mario",
+	// 	984759373: "luigi",
+	// 	845775485: "peach",
+	// }
+	// fmt.Println(phonebook)
+	// fmt.Println(phonebook[267584967])
+	// phonebook[267584967] = "bowser"
+	// fmt.Println(phonebook)
+	// phonebook[845775485] = "yoshi"
+	// fmt.Println(phonebook)
+
+	// pass by value
+	// non-pointer values: strings, ints, bools, floats, arrays, structs 
+	// name := "tifa"
+	// name = updateName(name)
+	// fmt.Println(name)
+	// pointer wrapper values: slices, maps, functions
+	// menu := map[string]float64{
+	// 	"pie": 5.95,
+	// 	"ice cream": 3.99,
+	// }
+	// updateMenu(menu)
+	// fmt.Println(menu)
+
+	// pointers
+	name := "tifa"
+	updateName(name)
+	// fmt.Println("memory address of name is:", &name) // 0xc000026250
+	m := &name // stores the pointer to 0xc000026250
+	// fmt.Println("memory address:", m) // 0xc000026250
+	// fmt.Println("value at memory address:", *m) // tifa
+	fmt.Println(name) // tifa
+	updateNameP(m)
+	fmt.Println(name) // wedge
+
 }
