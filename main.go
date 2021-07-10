@@ -270,14 +270,17 @@ func main() {
 	// fmt.Println(menu)
 
 	// pointers
-	name := "tifa"
-	updateName(name)
+	// name := "tifa"
+	// updateName(name)
 	// fmt.Println("memory address of name is:", &name) // 0xc000026250
-	m := &name // stores the pointer to 0xc000026250
-	// fmt.Println("memory address:", m) // 0xc000026250
-	// fmt.Println("value at memory address:", *m) // tifa
-	fmt.Println(name) // tifa
-	updateNameP(m)
-	fmt.Println(name) // wedge
+	// m := &name // stores the pointer to 0xc000026250
+	// // fmt.Println("memory address:", m) // 0xc000026250
+	// // fmt.Println("value at memory address:", *m) // tifa
+	// fmt.Println(name) // tifa
+	// updateNameP(m)
+	// fmt.Println(name) // wedge
 
+	// structs
+	mybill := newBill("mario's bill")
+	fmt.Println(mybill)
 }
