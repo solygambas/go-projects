@@ -1,6 +1,4 @@
-# Go Projects
-
-## Billing CLI
+# Billing CLI - Go Projects
 
 A bill calculator using the command-line interface to understand GO basics.
 
@@ -8,7 +6,7 @@ A bill calculator using the command-line interface to understand GO basics.
         <img src="screenshot.png">
 </p>
 
-### Features
+## Features
 
 - learning about types: strings, integers, floats and maps.
 - printing and formatting strings.
@@ -18,7 +16,7 @@ A bill calculator using the command-line interface to understand GO basics.
 - creating functions and returning multiple values.
 - understanding non-pointer values and pointer wrapper values.
 - making custom data types with structs and interfaces.
-- structuring our code with structs, receiver functions and pointers.
+- structuring our code with receiver functions and pointers.
 - handling user input and errors with switch statements.
 - saving the formatted bill to a text file.
 
